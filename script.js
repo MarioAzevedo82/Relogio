@@ -19,5 +19,6 @@ function horaAtual(){
 }
 
 horaAtual()
+setInterval(horaAtual, 1000)
 
 
