@@ -28,3 +28,50 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.numero {
+    font-size: 1.9rem;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.numero-1 {
+    transform: rotate(30deg);
+}
+.numero-2 {
+    transform: rotate(60deg);
+}
+.numero-3 {
+    transform: rotate(90deg);
+}
+.numero-4 {
+    transform: rotate(120deg);
+}
+.numero-5 {
+    transform: rotate(150deg);
+}
+.numero-6 {
+    transform: rotate(180deg);
+}
+.numero-7 {
+    transform: rotate(210deg);
+}
+.numero-8 {
+    transform: rotate(240deg);
+}
+.numero-9 {
+    transform: rotate(270deg);
+}
+.numero-10 {
+    transform: rotate(300deg);
+}
+.numero-11 {
+    transform: rotate(330deg);
+}
+.numero-12 {
+    transform: rotate(360deg);
+}
