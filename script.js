@@ -5,10 +5,19 @@ function horaAtual(){
     
     var agora = new Date()
     
-    var horario = agora.getHours()
+    var horario = horaCerta(agora.getHours()) + ":" + horaCerta(agora.getMinutes()) + ":" 
+    + horaCerta(agora.getSeconds())
     
     display.textContent = horario
+
+    function horaCerta(num){
+        if(num < 10){
+            num = "0" + num
+        }
+        return num
+    }
 }
 
 horaAtual()
+
 
