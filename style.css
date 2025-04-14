@@ -31,15 +31,20 @@ main {
 }
 
 .relogioDigital {
-    width: 350px;
+    width: 400px;
     height: 100px;
-    font-size: 80px;
-    color: #1ce73e;
+    font-size: 100px;
+    color: #39FF14;
     background-color: #222;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: 10;
 }
 
 .numero {
