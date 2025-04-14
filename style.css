@@ -30,10 +30,18 @@ main {
     justify-content: center;
 }
 
+.display{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    letter-spacing: 3px;
+}
+
 .relogioDigital {
     width: 400px;
     height: 100px;
-    font-size: 100px;
+    font-size: 80px;
     color: #39FF14;
     background-color: #222;
     position: absolute;
