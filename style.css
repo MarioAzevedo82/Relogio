@@ -41,7 +41,7 @@ main {
 
 .relogioDigital {
     width: 450px;
-    height: 200px;
+    height: 180px;
     font-size: 200px;
     color: #39FF14;
     background-color: #222;
@@ -129,4 +129,17 @@ main {
     transform: translateX(-50%) rotate(0deg) translateY(-270px);
     transform-origin: center center;
     z-index: 5;
+}
+
+.dataDisplay {
+    position: absolute;
+    top: calc(50% + 120px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #39FF14;
+    text-shadow: 0 0 5px #39FF14;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 10;
 }
