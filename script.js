@@ -20,6 +20,24 @@ function horaAtual(){
 horaAtual()
 setInterval(horaAtual, 1000)
 
+function atualizarData(){
+    const agora = new Date();
+    const diasSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+    const diaSemana = diasSemana[agora.getDay()];
+    const dia = agora.getDate();
+    const mes = agora.toLocaleString('default', {month: 'long'});
+
+    const dataFormatada = `${diaSemana}, ${dia} de ${mes}`;
+
+    const dataDisplay = document.querySelector('.dataDisplay');
+    if (dataDisplay){
+        dataDisplay.textContent = dataFormatada
+    }
+}
+
+atualizarData()
+setInterval(atualizarData, 60000)
+
 
 const bolinha = document.querySelector('.bolinha');
 
