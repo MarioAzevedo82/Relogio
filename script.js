@@ -5,8 +5,7 @@ function horaAtual(){
     
     var agora = new Date()
     
-    var horario = horaCerta(agora.getHours()) + ":" + horaCerta(agora.getMinutes()) + ":" 
-    + horaCerta(agora.getSeconds())
+    var horario = horaCerta(agora.getHours()) + ":" + horaCerta(agora.getMinutes()) 
     
     display.textContent = horario
 
