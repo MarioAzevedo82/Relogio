@@ -127,7 +127,7 @@ main {
     border-radius: 50%;
     top: 0
     left 50%;
-    transform: translateX(-50%) rotate(0deg) translateY(-280px);
+    transform: translateX(-50%) rotate(0deg) translateY(-270px);
     transform-origin: center center;
     z-index: 5;
 }
