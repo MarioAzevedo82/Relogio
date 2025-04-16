@@ -24,15 +24,27 @@ setInterval(horaAtual, 1000)
 
 const bolinha = document.querySelector('.bolinha');
 
-function atualizarBolinha() {
+// function atualizarBolinha() {
+//     const agora = new Date()
+//     const segundos = agora.getSeconds() +
+//     const angulo = segundos * 6
+
+//     bolinha.style.transform = `translateX(-50%) rotate(${angulo}deg) translateY(-280px)`;
+// }
+
+// setInterval(atualizarBolinha, 1000)
+// atualizarBolinha()
+
+function animarBolinha() {
     const agora = new Date()
-    const segundos = agora.getSeconds()
+    const segundos = agora.getSeconds() + agora.getMilliseconds()/1000
     const angulo = segundos * 6
 
     bolinha.style.transform = `translateX(-50%) rotate(${angulo}deg) translateY(-280px)`;
+
+    requestAnimationFrame(animarBolinha)
 }
 
-setInterval(atualizarBolinha, 1000)
-atualizarBolinha()
+animarBolinha()
 
 
