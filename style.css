@@ -119,30 +119,44 @@ main {
     z-index: 10;
 }
 
-.cidadeDisplay{
-    position: absolute;
-}
-
-/* RESPONSIVO */
 @media (max-width: 600px) {
     .display {
         font-size: 4rem;
     }
-
+    
     .numero {
         font-size: 1rem;
     }
-
+    
     .relogioDigital {
         font-size: 4rem;
     }
-
+    
     .dataDisplay {
         font-size: 1rem;
         top: calc(50% + 20vmin);
     }
-
+    
     .marcador {
         height: 6px;
     }
+}
+
+.cidadeDisplay {
+    position: absolute;
+    top: calc(50% + 25vmin);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6rem;
+    color: #39FF14;
+    text-shadow: 0 0 3px #39FF14;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    .cidadeDisplay{
+        font-size: 1rem;
+        top: calc(50% + 25vmin);
+    }    
 }
