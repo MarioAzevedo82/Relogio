@@ -119,6 +119,10 @@ main {
     z-index: 10;
 }
 
+.cidadeDisplay{
+    position: absolute;
+}
+
 /* RESPONSIVO */
 @media (max-width: 600px) {
     .display {
