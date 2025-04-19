@@ -83,5 +83,26 @@ function animarBolinha() {
 
 requestAnimationFrame(animarBolinha);
 
+function buscarCidade(){
+    fetch('https://ipapi.co/json/')
+
+    .then(response => response.json())
+    .then(data => {
+        const cidade = data.city;
+        const cidadeDisplay = document.querySelector('.cidadeDisplay');
+        if (cidadeDisplay && cidade) {
+            cidadeDisplay.textContent = `${cidade}`;
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao buscar a cidade:', error);
+        const cidadeDisplay = document.querySelector('.cidadeDisplay');
+        if(cidadeDisplay){
+            cidadeDisplay.textContent = "Cidade nõ encontrada";
+        }
+    })
+}
+buscarCidade()
+
 
 
