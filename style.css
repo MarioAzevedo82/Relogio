@@ -96,11 +96,12 @@ main {
 
 .bolinha {
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 2vmin;
     height: 2vmin;
     background-color: red;
     border-radius: 50%;
-    transform: translateX(-50%) rotate(0deg) translateY(-45vmin);
     transform-origin: center center;
     z-index: 5;
 }

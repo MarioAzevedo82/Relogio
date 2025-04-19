@@ -39,7 +39,7 @@ atualizarData()
 setInterval(atualizarData, 60000)
 
 
-const bolinha = document.querySelector('.bolinha');
+//const bolinha = document.querySelector('.bolinha');
 
 // function atualizarBolinha() {
 //     const agora = new Date()
@@ -52,16 +52,36 @@ const bolinha = document.querySelector('.bolinha');
 // setInterval(atualizarBolinha, 1000)
 // atualizarBolinha()
 
+// function animarBolinha() {
+//     const agora = new Date()
+//     const segundos = agora.getSeconds() + agora.getMilliseconds()/1000
+//     const angulo = segundos * 6
+
+//     bolinha.style.transform = `translateX(-50%) rotate(${angulo}deg) translateY(-280px)`;
+
+//     requestAnimationFrame(animarBolinha)
+// }
+
+// animarBolinha()
+
+
+const bolinha = document.querySelector('.bolinha');
+const relogio = document.querySelector('.relogioPonteiros');
+
 function animarBolinha() {
-    const agora = new Date()
-    const segundos = agora.getSeconds() + agora.getMilliseconds()/1000
-    const angulo = segundos * 6
+    const agora = new Date();
+    const segundos = agora.getSeconds() + agora.getMilliseconds() / 1000;
+    const angulo = segundos * 6; // 6 graus por segundo
 
-    bolinha.style.transform = `translateX(-50%) rotate(${angulo}deg) translateY(-280px)`;
+    const raio = relogio.offsetWidth / 2;
+    const distancia = raio * 0.95; // você curtiu assim :)
 
-    requestAnimationFrame(animarBolinha)
+    bolinha.style.transform = `rotate(${angulo}deg) translateY(-${distancia}px)`;
+
+    requestAnimationFrame(animarBolinha);
 }
 
-animarBolinha()
+requestAnimationFrame(animarBolinha);
+
 
 
