@@ -173,3 +173,23 @@ main {
     font-family: 'Orbritron', sans-serif;
     z-index: 10;
 }
+
+.infoRelogio {
+    position: absolute;
+    display: inline;
+    justify-content: center;
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #39FF14;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    z-index: 10;
+}
+.cidadeDisplay,
+.temperaturaDisplay {
+  margin: 0;
+  padding: 1px 0;
+}
