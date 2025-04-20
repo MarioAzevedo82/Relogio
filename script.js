@@ -89,19 +89,45 @@ function buscarCidade(){
     .then(response => response.json())
     .then(data => {
         const cidade = data.city;
+        const latitude = data.latitude;
+        const longitude = data.longitude;
+
         const cidadeDisplay = document.querySelector('.cidadeDisplay');
         if (cidadeDisplay && cidade) {
-            cidadeDisplay.textContent = `${cidade}`;
+            cidadeDisplay.textContent = cidade;
         }
+        buscarTemperatura(latitude, longitude);
     })
     .catch(error => {
         console.error('Erro ao buscar a cidade:', error);
         const cidadeDisplay = document.querySelector('.cidadeDisplay');
         if(cidadeDisplay){
-            cidadeDisplay.textContent = "Cidade nõ encontrada";
+            cidadeDisplay.textContent = "Cidade não encontrada";
         }
     })
 }
+
+function buscarTemperatura(lat, lon) {
+    const apiKey = '820e9fba3a8baa72a45680a26d4a7590'; 
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pt_br`)
+        .then(response => response.json())
+        .then(data => {
+            const temperatura = Math.round(data.main.temp);
+            const temperaturaDisplay = document.querySelector('.temperaturaDisplay');
+            if (temperaturaDisplay) {
+                temperaturaDisplay.textContent = `${temperatura}°C`;
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao buscar a temperatura:', error);
+            const temperaturaDisplay = document.querySelector('.temperaturaDisplay');
+            if (temperaturaDisplay) {
+                temperaturaDisplay.textContent = "Temperatura indisponível";
+            }
+        });
+}
+
 buscarCidade()
 
 
