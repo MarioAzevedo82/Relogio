@@ -116,7 +116,7 @@ function buscarTemperatura(lat, lon) {
             const temperatura = Math.round(data.main.temp);
             const temperaturaDisplay = document.querySelector('.temperaturaDisplay');
             if (temperaturaDisplay) {
-                temperaturaDisplay.textContent = `Tempertaura: ${temperatura}°C`;
+                temperaturaDisplay.textContent = `Tempertura: ${temperatura}°C`;
             }
         })
         .catch(error => {
